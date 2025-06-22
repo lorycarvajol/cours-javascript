@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Découverte des Variables en JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: auto;
+            padding: 2rem;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
+
+        h1,
+        h2 {
+            color: #2c3e50;
+        }
+
+        code {
+            background-color: #e1e1e1;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .exercice {
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: #fff;
+            border: 2px solid #ccc;
+            border-radius: 6px;
+        }
+
+        input,
+        button {
+            margin-top: 0.5rem;
+            padding: 0.4rem;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>✨ Introduction aux variables en JavaScript</h1>
+
+    <h2>1. Qu'est-ce qu'une variable ?</h2>
+    <p>Une variable est comme une boîte dans laquelle on peut stocker une information. Par exemple :</p>
+    <pre><code>let prenom = "Lory";</code></pre>
+    <p>Ici, on crée une variable appelée <code>prenom</code> contenant le texte <strong>Lory</strong>.</p>
+
+    <h2>2. Utiliser une variable</h2>
+    <pre><code>let age = 25;
+let message = "Tu as " + age + " ans.";
+alert(message);</code></pre>
+
+    <h2>3. Exercice interactif : Ton prénom</h2>
+    <div class="exercice">
+        <label>Quel est ton prénom ?</label><br>
+        <input type="text" id="prenomInput">
+        <button onclick="direBonjour()">Dire bonjour</button>
+        <p id="bonjourResult"></p>
+    </div>
+
+    <h2>4. Exercice final : Année de naissance</h2>
+    <div class="exercice">
+        <label>Quel âge as-tu ?</label><br>
+        <input type="number" id="ageInput">
+        <button onclick="calculerNaissance()">Calculer</button>
+        <p id="naissanceResult"></p>
+    </div>
+
+    <script>
+        function direBonjour() {
+            const prenom = document.getElementById("prenomInput").value;
+            document.getElementById("bonjourResult").textContent = "Bonjour " + prenom + " ! Bienvenue.";
+        }
+
+        function calculerNaissance() {
+            const age = parseInt(document.getElementById("ageInput").value);
+            const annee = 2025 - age;
+            document.getElementById("naissanceResult").textContent = "Tu es né(e) en " + annee + ".";
+        }
+    </script>
+</body>
+
+</html>
