@@ -1,4 +1,3 @@
-````markdown
 # 🧪 Potion Factory – Live Coding JS
 
 Une application web interactive pour explorer et maîtriser les fondamentaux de JavaScript :  
