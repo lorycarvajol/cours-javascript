@@ -3,87 +3,137 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Découverte des Variables en JavaScript</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>🧪 Potion Factory – Live Coding JS</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: auto;
-            padding: 2rem;
-            line-height: 1.6;
-            background-color: #f5f5f5;
-        }
 
-        h1,
-        h2 {
-            color: #2c3e50;
-        }
-
-        code {
-            background-color: #e1e1e1;
-            padding: 2px 6px;
-            border-radius: 4px;
-        }
-
-        .exercice {
-            margin-top: 2rem;
-            padding: 1rem;
-            background-color: #fff;
-            border: 2px solid #ccc;
-            border-radius: 6px;
-        }
-
-        input,
-        button {
-            margin-top: 0.5rem;
-            padding: 0.4rem;
-            font-size: 1rem;
-        }
     </style>
 </head>
 
 <body>
-    <h1>✨ Introduction aux variables en JavaScript</h1>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">🧪 Potion Factory</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="filter: invert(1)"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tutoriels.html">Jeux & Exercices</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="references.html">Références</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <h2>1. Qu'est-ce qu'une variable ?</h2>
-    <p>Une variable est comme une boîte dans laquelle on peut stocker une information. Par exemple :</p>
-    <pre><code>let prenom = "Lory";</code></pre>
-    <p>Ici, on crée une variable appelée <code>prenom</code> contenant le texte <strong>Lory</strong>.</p>
-
-    <h2>2. Utiliser une variable</h2>
-    <pre><code>let age = 25;
-let message = "Tu as " + age + " ans.";
-alert(message);</code></pre>
-
-    <h2>3. Exercice interactif : Ton prénom</h2>
-    <div class="exercice">
-        <label>Quel est ton prénom ?</label><br>
-        <input type="text" id="prenomInput">
-        <button onclick="direBonjour()">Dire bonjour</button>
-        <p id="bonjourResult"></p>
+    <!-- HERO -->
+    <div class="container-fluid px-4">
+        <div class="hero">
+            <h1 class="display-5">🧪 Potion Factory</h1>
+            <p class="lead">Explore <code>const</code>, <code>let</code>, <code>var</code> et les fonctions dans un
+                univers magique !</p>
+        </div>
     </div>
 
-    <h2>4. Exercice final : Année de naissance</h2>
-    <div class="exercice">
-        <label>Quel âge as-tu ?</label><br>
-        <input type="number" id="ageInput">
-        <button onclick="calculerNaissance()">Calculer</button>
-        <p id="naissanceResult"></p>
+    <!-- CONTENU PRINCIPAL -->
+    <div class="container-fluid px-4 pb-5">
+        <div class="row gy-4">
+            <!-- Base Potion -->
+            <section id="basePotion" class="col-12 col-lg-3">
+                <div class="card">
+                    <div class="card-header">🍵 Base Potion (<code>const</code>)</div>
+                    <div class="card-body d-flex flex-column">
+                        <p>Sélectionne ta potion de base (verrouillée après choix).</p>
+                        <label class="form-label" for="selBase">Base</label>
+                        <select id="selBase" class="form-select mb-3">
+                            <option value="" disabled selected>-- Choisir --</option>
+                            <option value="Potion de Vie">Potion de Vie</option>
+                            <option value="Potion de Mana">Potion de Mana</option>
+                            <option value="Potion de Force">Potion de Force</option>
+                        </select>
+                        <button id="btnResetBase" class="btn btn-outline-secondary mb-3" disabled>
+                            🔄 Réinitialiser
+                        </button>
+                        <div class="alert alert-info mb-0" id="outBase">
+                            Aucune base sélectionnée.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Mixer Ingrédients -->
+            <section id="mixIngredients" class="col-12 col-lg-3">
+                <div class="card">
+                    <div class="card-header">🔧 Mixer (<code>var</code> vs <code>let</code>)</div>
+                    <div class="card-body d-flex flex-column">
+                        <p>
+                            <strong>var</strong> : ajusté en direct<br>
+                            <strong>let</strong> : appliqué au clic
+                        </p>
+                        <div class="mb-3">
+                            <label class="form-label">
+                                Puissance (<code>var</code>) : <span id="lblVar">50</span>
+                            </label>
+                            <input type="range" id="rngVar" class="form-range" min="0" max="100" value="50">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">
+                                Puissance (<code>let</code>) : <span id="lblLet">30</span>
+                            </label>
+                            <input type="range" id="rngLet" class="form-range" min="0" max="100" value="30">
+                        </div>
+                        <button id="btnApplyLet" class="btn btn-purple mb-3">Appliquer let</button>
+                        <div class="alert alert-success mb-0" id="outMix">
+                            Aucun mélange effectué.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Livre des Sorts -->
+            <section id="spellBook" class="col-12 col-lg-6">
+                <div class="card">
+                    <div class="card-header">✨ Livre des Sorts (fonctions)</div>
+                    <div class="card-body d-flex flex-column">
+                        <p>Clique sur un sort :</p>
+                        <div class="d-grid gap-2 mb-3">
+                            <button data-spell="classic" class="btn btn-warning">🔮 Classique</button>
+                            <button data-spell="expression" class="btn btn-info text-white">🌀 Expression</button>
+                            <button data-spell="arrow" class="btn btn-success">⚡ Flèche</button>
+                        </div>
+                        <div class="alert alert-secondary mb-0" id="outSpells">
+                            Aucun sort lancé.
+                        </div>
+                    </div>
+                </div>
+            </section>
+            </div>
     </div>
 
-    <script>
-        function direBonjour() {
-            const prenom = document.getElementById("prenomInput").value;
-            document.getElementById("bonjourResult").textContent = "Bonjour " + prenom + " ! Bienvenue.";
-        }
+    <!-- Bootstrap JS & Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-…"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
 
-        function calculerNaissance() {
-            const age = parseInt(document.getElementById("ageInput").value);
-            const annee = 2025 - age;
-            document.getElementById("naissanceResult").textContent = "Tu es né(e) en " + annee + ".";
-        }
-    </script>
+    <!-- Votre script principal -->
+    <script type="module" src="./scripts/main.js"></script>
 </body>
 
 </html>

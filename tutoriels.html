@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>🎮 Jeux & Exercices – Potion Factory</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+    </style>
+    </head>
+    
+    <body>
+    
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg mb-4">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">🧪 Potion Factory</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" style="filter: invert(1)"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="tutoriels.html">Jeux & Exercices</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="references.html">Références</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    
+        <!-- HERO -->
+        <div class="container-fluid px-4">
+            <div class="hero">
+                <h1 class="display-5">🎮 Jeux & Exercices JS</h1>
+                <p class="lead">Teste et renforce tes compétences sur <code>var</code>, <code>let</code>, <code>const</code>
+                    et les fonctions !</p>
+            </div>
+        </div>
+    
+        <!-- CONTENU -->
+        <div class="container-fluid px-4 pb-5">
+            <div class="row gy-4">
+    
+                <!-- Exercice 1 : var vs let -->
+                <section class="col-12 col-lg-6">
+                    <div class="card">
+                        <div class="card-header">1️⃣ <code>var</code> vs <code>let</code></div>
+                        <div class="card-body">
+                            <p><strong>Objectif :</strong> Comprendre la portée (scope) des variables.</p>
+                            <p><strong>Énoncé détaillé :</strong><br>
+                                Dans la fonction <code>test()</code>, on déclare <code>x</code> avec <code>var</code> et
+                                <code>y</code> avec <code>let</code> à l’intérieur d’un bloc.
+                                Que va afficher la console pour chaque <code>console.log</code> ? Indiquez les deux
+                                résultats séparés par une virgule.</p>
+                            <pre class="code-snippet">
+        // Code :
+        function test() {
+          if (true) {
+            var x = 1;
+            let y = 2;
+          }
+          console.log(x);
+          console.log(y);
+        }
+        test();</pre>
+    
+                            <div class="mb-3">
+                                <label for="answer1" class="form-label">Votre réponse :</label>
+                                <input type="text" id="answer1" class="form-control" placeholder="ex : 1,ReferenceError">
+                            </div>
+                            <div class="d-flex gap-2">
+                                <button id="check1" class="btn btn-purple">Vérifier</button>
+                                <button id="show1" class="btn btn-outline-secondary">Solution</button>
+                                <button id="reset1" class="btn btn-outline-danger">Relancer</button>
+                            </div>
+                            <div id="feedback1" class="mt-3"></div>
+                            <div id="solution1" class="solution">
+                                1 → <code>1</code> (x visible hors du bloc)<br>
+                                2 → <strong>ReferenceError</strong> (y non défini hors du bloc)
+                            </div>
+                        </div>
+                    </div>
+                </section>
+    
+                <!-- Exercice 2 : const -->
+                <section class="col-12 col-lg-6">
+                    <div class="card">
+                        <div class="card-header">2️⃣ <code>const</code></div>
+                        <div class="card-body">
+                            <p><strong>Objectif :</strong> Voir qu’une constante ne peut pas être réaffectée.</p>
+                            <p><strong>Énoncé détaillé :</strong><br>
+                                On définit <code>const MY_POTION = 'vie'</code>.
+                                Complétez la ligne suivante pour qu’elle lance une erreur <code>TypeError</code> lors de
+                                l’exécution.</p>
+                            <pre class="code-snippet">
+        //…
+        // À compléter ici :</pre>
+    
+                            <div class="mb-3">
+                                <label for="answer2" class="form-label">Votre ligne de réaffectation :</label>
+                                <input type="text" id="answer2" class="form-control" placeholder="ex : MY_POTION = 'mana';">
+                            </div>
+                            <div class="d-flex gap-2">
+                                <button id="check2" class="btn btn-purple">Vérifier</button>
+                                <button id="show2" class="btn btn-outline-secondary">Solution</button>
+                                <button id="reset2" class="btn btn-outline-danger">Relancer</button>
+                            </div>
+                            <div id="feedback2" class="mt-3"></div>
+                            <div id="solution2" class="solution">
+                                <code>MY_POTION = 'mana';</code><br>
+                                → TypeError : assignment to constant variable.
+                            </div>
+                        </div>
+                    </div>
+                </section>
+    
+                <!-- Exercice 3 : Fonctions -->
+                <section class="col-12">
+                    <div class="card">
+                        <div class="card-header">3️⃣ Fonctions</div>
+                        <div class="card-body">
+                            <p><strong>Objectif :</strong> Associer chaque style de fonction à sa caractéristique.</p>
+                            <p><strong>Énoncé détaillé :</strong><br>
+                                Trois façons de déclarer une fonction en JS :<br>
+                                – <code>function foo() {…}</code> (classic, hoisted)<br>
+                                – <code>const foo = function() {…}</code> (expression)<br>
+                                – <code>const foo = () => {…}</code> (arrow)<br>
+                                Choisissez le bon type pour chaque description.</p>
+    
+                            <div class="mb-3">
+                                <label class="form-label">Classic (hoisted)</label>
+                                <select id="q3a" class="form-select" data-correct="classic">
+                                    <option value="">-- Choisir --</option>
+                                    <option value="classic">function foo()…</option>
+                                    <option value="expression">const foo = function()…</option>
+                                    <option value="arrow">const foo = () => …</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Expression</label>
+                                <select id="q3b" class="form-select" data-correct="expression">
+                                    <option value="">-- Choisir --</option>
+                                    <option value="classic">function foo()…</option>
+                                    <option value="expression">const foo = function()…</option>
+                                    <option value="arrow">const foo = () => …</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Arrow</label>
+                                <select id="q3c" class="form-select" data-correct="arrow">
+                                    <option value="">-- Choisir --</option>
+                                    <option value="classic">function foo()…</option>
+                                    <option value="expression">const foo = function()…</option>
+                                    <option value="arrow">const foo = () => …</option>
+                                </select>
+                            </div>
+                            <div class="d-flex gap-2">
+                                <button id="check3" class="btn btn-purple">Vérifier</button>
+                                <button id="show3" class="btn btn-outline-secondary">Solution</button>
+                                <button id="reset3" class="btn btn-outline-danger">Relancer</button>
+                            </div>
+                            <div id="feedback3" class="mt-3"></div>
+                            <div id="solution3" class="solution">
+                                - Classic → <code>classic</code><br>
+                                - Expression → <code>expression</code><br>
+                                - Arrow → <code>arrow</code>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+    
+                <!-- Nouvelle rangée pour exercices supplémentaires -->
+                <div class="row gy-4 mt-4">
+    
+                    <!-- Exercice 4 : Redeclaration -->
+                    <section class="col-12 col-lg-6">
+                        <div class="card">
+                            <div class="card-header">4️⃣ Redeclaration <code>var</code> vs <code>let</code></div>
+                            <div class="card-body">
+                                <p><strong>Objectif :</strong> Savoir ce qui se passe quand on redéclare.</p>
+                                <p><strong>Énoncé détaillé :</strong><br>
+                                    Que se passe-t-il ici ? Prédisez l’ordre : premier <code>console.log</code> affiche quoi
+                                    ? Et ensuite ?<br>
+                                    Écrivez les deux résultats séparés par une virgule.</p>
+                                <pre class="code-snippet">
+        // Code :
+        var a = 1;
+        var a = 2;
+        console.log(a);
+        
+        let b = 1;
+        let b = 2;
+        console.log(b);
+                      </pre>
+                                <div class="mb-3">
+                                    <label for="answer4" class="form-label">Votre réponse :</label>
+                                    <input type="text" id="answer4" class="form-control" placeholder="ex : 2,SyntaxError">
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button id="check4" class="btn btn-purple">Vérifier</button>
+                                    <button id="show4" class="btn btn-outline-secondary">Solution</button>
+                                    <button id="reset4" class="btn btn-outline-danger">Relancer</button>
+                                </div>
+                                <div id="feedback4" class="mt-3"></div>
+                                <div id="solution4" class="solution">
+                                    1 → <code>2</code> (var redéclaré OK)<br>
+                                    2 → <strong>SyntaxError</strong> (let redéclaration interdite)
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+    
+                    <!-- Exercice 5 : Mutation d'objet const -->
+                    <section class="col-12 col-lg-6">
+                        <div class="card">
+                            <div class="card-header">5️⃣ Mutation & <code>const</code></div>
+                            <div class="card-body">
+                                <p><strong>Objectif :</strong> Comprendre la différence entre réassignation et mutation.</p>
+                                <p><strong>Énoncé détaillé :</strong><br>
+                                    Que va afficher la console pour chaque <code>console.log</code> ? Indiquez les deux
+                                    valeurs séparées par une virgule.</p>
+                                <pre class="code-snippet">
+        // Code :
+        const potion = {level: 1};
+        potion.level = 5;
+        console.log(potion.level);
+        potion = {level: 10};
+        console.log(potion.level);
+                      </pre>
+                                <div class="mb-3">
+                                    <label for="answer5" class="form-label">Votre réponse :</label>
+                                    <input type="text" id="answer5" class="form-control" placeholder="ex : 5,TypeError">
+                                </div>
+                                <div class="d-flex gap-2">
+                                    <button id="check5" class="btn btn-purple">Vérifier</button>
+                                    <button id="show5" class="btn btn-outline-secondary">Solution</button>
+                                    <button id="reset5" class="btn btn-outline-danger">Relancer</button>
+                                </div>
+                                <div id="feedback5" class="mt-3"></div>
+                                <div id="solution5" class="solution">
+                                    1 → <code>5</code> (mutation OK)<br>
+                                    2 → <strong>TypeError</strong> (réassignation interdite)
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+    
+                </div>
+            </div>
+        </div>
+    
+        <!-- Bootstrap JS & Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.4.2/dist/js/bootstrap.min.js"
+            crossorigin="anonymous"></script>
+    
+        <!-- Script de validation & reset -->
+        <script>
+            function makeExercise(id, validateFn) {
+                const ans = document.getElementById(`answer${id}`);
+                const fb = document.getElementById(`feedback${id}`);
+                const sol = document.getElementById(`solution${id}`);
+                const chkBtn = document.getElementById(`check${id}`);
+                const showBtn = document.getElementById(`show${id}`);
+                const rstBtn = document.getElementById(`reset${id}`);
+
+                chkBtn.onclick = () => {
+                    const result = validateFn(ans.value);
+                    fb.innerHTML = result.ok
+                        ? '<div class="alert alert-success">✅ ' + result.msg + '</div>'
+                        : '<div class="alert alert-danger">❌ ' + result.msg + '</div>';
+                };
+                showBtn.onclick = () => sol.style.display = 'block';
+                rstBtn.onclick = () => {
+                    ans.value = '';
+                    fb.innerHTML = '';
+                    sol.style.display = 'none';
+                };
+            }
+
+            // Exo1
+            makeExercise(1, v => {
+                const parts = v.split(',').map(s => s.trim().toLowerCase());
+                return {
+                    ok: parts[0] === '1' && parts[1].startsWith('referenceerror'),
+                    msg: parts[0] === '1' && parts[1].startsWith('referenceerror')
+                        ? 'Correct' : 'Réessaie'
+                };
+            });
+            // Exo2
+            makeExercise(2, v => ({
+                ok: v.trim() === "MY_POTION = 'mana';",
+                msg: v.trim() === "MY_POTION = 'mana';" ? 'Exact !' : 'Vérifie la syntaxe'
+            }));
+            // Exo3
+            makeExercise('3', v => ({ ok: false, msg: '' })); // dummy
+            document.getElementById('check3').onclick = () => {
+                const sels = ['q3a', 'q3b', 'q3c'].map(id => document.getElementById(id));
+                const ok = sels.every(s => s.value === s.dataset.correct);
+                document.getElementById('feedback3').innerHTML =
+                    ok
+                        ? '<div class="alert alert-success">✅ Parfait !</div>'
+                        : '<div class="alert alert-danger">❌ Il y a une ou plusieurs erreurs.</div>';
+            };
+            document.getElementById('show3').onclick = () => document.getElementById('solution3').style.display = 'block';
+            document.getElementById('reset3').onclick = () => {
+                ['q3a', 'q3b', 'q3c'].forEach(id => document.getElementById(id).value = '');
+                document.getElementById('feedback3').innerHTML = '';
+                document.getElementById('solution3').style.display = 'none';
+            };
+            // Exo4
+            makeExercise(4, v => {
+                const parts = v.split(',').map(s => s.trim().toLowerCase());
+                return {
+                    ok: parts[0] === '2' && parts[1].startsWith('syntaxerror'),
+                    msg: parts[0] === '2' && parts[1].startsWith('syntaxerror')
+                        ? 'Correct' : 'Réessaie'
+                };
+            });
+            // Exo5
+            makeExercise(5, v => {
+                const parts = v.split(',').map(s => s.trim().toLowerCase());
+                return {
+                    ok: parts[0] === '5' && parts[1].startsWith('typeerror'),
+                    msg: parts[0] === '5' && parts[1].startsWith('typeerror')
+                        ? 'Correct' : 'Réessaie'
+                };
+            });
+        </script>
+    
+    </body>
+    </html>
