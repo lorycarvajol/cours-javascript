@@ -6,116 +6,208 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>📖 Références – Potion Factory</title>
 
-    <!-- Bootstrap CSS -->
-    <!-- Bootstrap CSS -->
+    <!-- 1. Bootstrap CSS (CDN) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <!-- Google Font -->
+<!-- 2. Google Font : Roboto -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<!-- 3. Feuille de styles globale -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg mb-4">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-purple mb-4">
         <div class="container">
             <a class="navbar-brand" href="index.html">🧪 Potion Factory</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon" style="filter: invert(1)"></span>
+                <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="tutoriels.html">Jeux & Exercices</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="references.html">Références</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tutoriels.html">Jeux & Exercices</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="references.html">Références</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- HERO -->
-    <div class="container-fluid px-4">
-        <div class="hero">
-            <h1 class="display-5">📖 Références JavaScript</h1>
-            <p class="lead">Documentation interactive pour <code>var</code>, <code>let</code>, <code>const</code> et
-                fonctions.</p>
+    <header class="container my-5">
+        <div class="p-5 text-center bg-purple-dark text-white rounded">
+            <h1 class="display-5 mb-3">📖 Références JavaScript</h1>
+            <p class="lead mb-0">
+                Apprenez les fondamentaux : <code>var</code>, <code>let</code>, <code>const</code>, hoisting, fonctions
+                et plus encore.
+            </p>
         </div>
-    </div>
+    </header>
+    
+    <!-- CONTENU PRINCIPAL -->
+    <main class="container mb-5">
+        <article class="bg-white p-4 rounded shadow-sm">
+    
+            <!-- 1. Qu’est-ce qu’une variable ? -->
+            <section class="mb-5">
+                <h2 class="h3 text-purple-dark mb-3">1. Qu'est-ce qu'une variable ?</h2>
+                <p>Une variable est une « boîte » nommée pour stocker une valeur :</p>
+                <pre class="code-snippet"><code>let prenom = "Hector";</code></pre>
+                <p>On définit ici une variable <code>prenom</code> contenant la chaîne <strong>"Hector"</strong>.</p>
+            </section>
+    
+            <!-- 2. var vs let vs const -->
+            <section class="mb-5">
+                <h2 class="h3 text-purple-dark mb-3">2. var vs let vs const</h2>
+                <p>
+                    <strong><code>var</code></strong> :
+                <ul>
+                    <li>Portée fonction (ou globale).</li>
+                    <li>Hoisted (déclarée en haut de la fonction).</li>
+                    <li>Peut être redéclarée.</li>
+                </ul>
+                </p>
+                <p>
+                    <strong><code>let</code></strong> :
+                <ul>
+                    <li>Portée bloc.</li>
+                    <li>Non hoisted (temporal dead zone).</li>
+                    <li>Pas de redéclaration dans le même scope.</li>
+                </ul>
+                </p>
+                <p>
+                    <strong><code>const</code></strong> :
+                <ul>
+                    <li>Comme <code>let</code> (bloc scope).</li>
+                    <li>Valeur immuable (réassignation interdite).</li>
+                    <li>Permet la mutation d’objets, mais pas la réaffectation.</li>
+                </ul>
+                </p>
+                <pre class="code-snippet"><code>
+            // var hoisting
+            console.log(a); // undefined
+            var a = 5;
+            
+            // let/const TDZ
+            console.log(b); // ReferenceError
+            let b = 5;
+            
+            // const redécl.
+            const c = 1;
+            c = 2; // TypeError
+                    </code></pre>
+            </section>
+    
+            <!-- 3. Hoisting -->
+            <section class="mb-5">
+                <h2 class="h3 text-purple-dark mb-3">3. Hoisting</h2>
+                <p>JavaScript élève les déclarations <code>var</code> et les fonctions au début de leur scope :</p>
+                <pre class="code-snippet"><code>
+            // Déclaration classique de fonction
+            foo(); // "Hello"
+            function foo() {
+              console.log("Hello");
+            }
+            
+            // var hoisted, initialisation non
+            console.log(x); // undefined
+            var x = 10;
+                    </code></pre>
+            </section>
 
-    <!-- SECTION : Découverte des Variables -->
-    <section class="ref-section">
-        <h1>✨ Introduction aux variables en JavaScript</h1>
+            <!-- 4. Fonctions -->
+            <section class="mb-5">
+                <h2 class="h3 text-purple-dark mb-3">4. Fonctions</h2>
+                <p>Trois syntaxes :</p>
+                <ul>
+                    <li><strong>Déclaration classique</strong> (hoisted) : <code>function foo(){…}</code></li>
+                    <li><strong>Expression de fonction</strong> : <code>const foo = function(){…}</code></li>
+                    <li><strong>Arrow function</strong> : <code>const foo = () => {…}</code></li>
+                </ul>
+                <pre class="code-snippet"><code>
+                                    // Classic
+                                    function square(n) {
+                                      return n * n;
+                                    }
 
-        <h2>1. Qu'est-ce qu'une variable ?</h2>
-        <p>Une variable est comme une boîte dans laquelle on peut stocker une information. Par exemple :</p>
-        <pre><code>let prenom = "Lory";</code></pre>
-        <p>On crée ici une variable <code>prenom</code> qui contient la chaîne de caractères <strong>Lory</strong>.</p>
+// Expression
+const double = function(n) {
+return n + n;
+};
 
-        <h2>2. Utiliser une variable</h2>
-        <pre><code>let age = 25;
-let message = "Tu as " + age + " ans.";
-alert(message);</code></pre>
-        <p>On combine ici texte et valeur numérique pour créer un message.</p>
+// Arrow
+const cube = n => n ** 3;
+</code></pre>
+</section>
 
-        <h2>3. Exercice interactif : Ton prénom</h2>
-        <div class="exercice">
-            <label for="prenomInput">Quel est ton prénom ?</label><br>
-            <input type="text" id="prenomInput" class="form-control" placeholder="Tape ton prénom">
-            <button class="btn btn-purple" onclick="direBonjour()">Dire bonjour</button>
-            <p id="bonjourResult" class="mt-2"></p>
-        </div>
+            <!-- 5. Exercice interactif : Ton prénom -->
+            <section class="mb-5">
+                <h2 class="h3 text-purple-dark mb-3">5. Exercice : Ton prénom</h2>
+                <div class="exercice">
+                    <div class="mb-3">
+                        <label for="prenomInput" class="form-label">Quel est ton prénom ?</label>
+                        <input type="text" id="prenomInput" class="form-control" placeholder="Tape ton prénom">
+                    </div>
+                    <button id="btnPrenom" class="btn btn-purple mb-2">Dire bonjour</button>
+                    <div id="bonjourResult" class="mt-2"></div>
+                    </div>
+                    </section>
 
-        <h2>4. Exercice final : Année de naissance</h2>
-        <div class="exercice">
-            <label for="ageInput">Quel âge as-tu ?</label><br>
-            <input type="number" id="ageInput" class="form-control" placeholder="Ex : 30">
-            <button class="btn btn-purple" onclick="calculerNaissance()">Calculer année de naissance</button>
-            <p id="naissanceResult" class="mt-2"></p>
-        </div>
-    </section>
+            <!-- 6. Exercice interactif : Année de naissance -->
+            <section>
+                <h2 class="h3 text-purple-dark mb-3">6. Exercice : Année de naissance</h2>
+                <div class="exercice">
+                    <div class="mb-3">
+                        <label for="ageInput" class="form-label">Quel âge as-tu ?</label>
+                        <input type="number" id="ageInput" class="form-control" placeholder="Ex : 30">
+                    </div>
+                    <button id="btnAge" class="btn btn-purple mb-2">Calculer année de naissance</button>
+                    <div id="naissanceResult" class="mt-2"></div>
+                    </div>
+                    </section>
 
-    <!-- Bootstrap JS & Popper -->
+        </article>
+        </main>
+        
+        <!-- Popper & Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.4.2/dist/js/bootstrap.min.js"
         crossorigin="anonymous"></script>
 
-    <!-- Script pour les exercices interactifs -->
+    <!-- SCRIPT : exercices interactifs -->
     <script>
-        function direBonjour() {
-            const prenom = document.getElementById("prenomInput").value.trim();
-            const cible = document.getElementById("bonjourResult");
+                    // Exercice 5 : direBonjour
+                    document.getElementById('btnPrenom').addEventListener('click', () => {
+                        const prenom = document.getElementById('prenomInput').value.trim();
+                        const cible = document.getElementById('bonjourResult');
             if (!prenom) {
-                cible.textContent = "Veuillez entrer un prénom.";
-                cible.style.color = "red";
+                cible.textContent = 'Veuillez entrer un prénom.';
+                cible.className = 'text-danger';
             } else {
                 cible.textContent = `Bonjour ${prenom} ! Bienvenue.`;
-                cible.style.color = "#2c3e50";
+                cible.className = 'text-dark';
             }
-        }
+                });
 
-        function calculerNaissance() {
-            const ageVal = document.getElementById("ageInput").value;
-            const cible = document.getElementById("naissanceResult");
+                    // Exercice 6 : calculerNaissance
+                    document.getElementById('btnAge').addEventListener('click', () => {
+                        const ageVal = document.getElementById('ageInput').value;
+                        const cible = document.getElementById('naissanceResult');
             const age = parseInt(ageVal, 10);
             if (isNaN(age) || age < 0) {
-                cible.textContent = "Veuillez entrer un âge valide.";
-                cible.style.color = "red";
+                cible.textContent = 'Veuillez entrer un âge valide.';
+                cible.className = 'text-danger';
             } else {
-                const annee = new Date().getFullYear() - age;
-                cible.textContent = `Tu es né(e) en ${annee}.`;
-                cible.style.color = "#2c3e50";
+                const year = new Date().getFullYear() - age;
+                cible.textContent = `Tu es né(e) en ${year}.`;
+                cible.className = 'text-dark';
             }
-        }
+                });
     </script>
+
 </body>
 
 </html>

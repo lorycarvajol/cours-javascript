@@ -5,26 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>🧪 Potion Factory – Live Coding JS</title>
-    <!-- Bootstrap CSS -->
+<!-- 1. Bootstrap CSS (CDN) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <!-- Google Font -->
+<!-- 2. Google Font : Roboto -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<!-- 3. Feuille de styles globale -->
     <link rel="stylesheet" href="style.css">
-    <style>
-
-    </style>
 </head>
 
 <body>
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg mb-4">
+<!-- NAVBAR : en-tête de navigation responsive -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-purple mb-4">
         <div class="container">
+            <!-- Logo / Brand -->
             <a class="navbar-brand" href="index.html">🧪 Potion Factory</a>
+            <!-- Bouton burger pour écrans réduits -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon" style="filter: invert(1)"></span>
+                <span class="navbar-toggler-icon"></span>
             </button>
+            <!-- Liens de navigation -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
@@ -41,98 +42,116 @@
         </div>
     </nav>
 
-    <!-- HERO -->
-    <div class="container-fluid px-4">
-        <div class="hero">
-            <h1 class="display-5">🧪 Potion Factory</h1>
-            <p class="lead">Explore <code>const</code>, <code>let</code>, <code>var</code> et les fonctions dans un
-                univers magique !</p>
+    <!-- HERO : section d’introduction pleine largeur -->
+    <header class="container-fluid px-4 mb-5">
+        <div class="hero text-center p-5 rounded bg-purple-dark text-white">
+            <!-- Titre principal -->
+            <h1 class="display-5 mb-3">🧪 Potion Factory</h1>
+            <!-- Sous-titre / description -->
+            <p class="lead">
+                Explore <code>const</code>, <code>let</code>, <code>var</code> et les fonctions dans un univers magique
+                !
+            </p>
         </div>
-    </div>
+    </header>
 
-    <!-- CONTENU PRINCIPAL -->
-    <div class="container-fluid px-4 pb-5">
+    <!-- CONTENU PRINCIPAL : trois colonnes sur grand écran -->
+    <main class="container-fluid px-4 pb-5">
         <div class="row gy-4">
-            <!-- Base Potion -->
+<!-- 1. Base Potion (const) -->
             <section id="basePotion" class="col-12 col-lg-3">
-                <div class="card">
+                <div class="card h-100 shadow-sm">
+                    <!-- En-tête de la carte -->
                     <div class="card-header">🍵 Base Potion (<code>const</code>)</div>
                     <div class="card-body d-flex flex-column">
+                        <!-- Description courte -->
                         <p>Sélectionne ta potion de base (verrouillée après choix).</p>
-                        <label class="form-label" for="selBase">Base</label>
+<!-- Sélecteur de base -->
+<label for="selBase" class="form-label">Base</label>
                         <select id="selBase" class="form-select mb-3">
                             <option value="" disabled selected>-- Choisir --</option>
                             <option value="Potion de Vie">Potion de Vie</option>
                             <option value="Potion de Mana">Potion de Mana</option>
                             <option value="Potion de Force">Potion de Force</option>
                         </select>
+<!-- Bouton de reset, désactivé par défaut -->
                         <button id="btnResetBase" class="btn btn-outline-secondary mb-3" disabled>
                             🔄 Réinitialiser
                         </button>
-                        <div class="alert alert-info mb-0" id="outBase">
+<!-- Zone d’affichage du résultat -->
+<div id="outBase" class="alert alert-info mb-0">
                             Aucune base sélectionnée.
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Mixer Ingrédients -->
+            <!-- 2. Mixer Ingrédients (var vs let) -->
             <section id="mixIngredients" class="col-12 col-lg-3">
-                <div class="card">
+                <div class="card h-100 shadow-sm">
                     <div class="card-header">🔧 Mixer (<code>var</code> vs <code>let</code>)</div>
                     <div class="card-body d-flex flex-column">
+                        <!-- Explication du var et let -->
                         <p>
                             <strong>var</strong> : ajusté en direct<br>
                             <strong>let</strong> : appliqué au clic
                         </p>
+<!-- Slider var -->
                         <div class="mb-3">
                             <label class="form-label">
                                 Puissance (<code>var</code>) : <span id="lblVar">50</span>
                             </label>
                             <input type="range" id="rngVar" class="form-range" min="0" max="100" value="50">
                         </div>
+<!-- Slider let -->
                         <div class="mb-3">
                             <label class="form-label">
                                 Puissance (<code>let</code>) : <span id="lblLet">30</span>
                             </label>
                             <input type="range" id="rngLet" class="form-range" min="0" max="100" value="30">
                         </div>
+<!-- Bouton d’application let -->
                         <button id="btnApplyLet" class="btn btn-purple mb-3">Appliquer let</button>
-                        <div class="alert alert-success mb-0" id="outMix">
+<!-- Zone d’affichage du mix -->
+<div id="outMix" class="alert alert-success mb-0">
                             Aucun mélange effectué.
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Livre des Sorts -->
+            <!-- 3. Livre des Sorts (fonctions) -->
             <section id="spellBook" class="col-12 col-lg-6">
-                <div class="card">
+                <div class="card h-100 shadow-sm">
                     <div class="card-header">✨ Livre des Sorts (fonctions)</div>
                     <div class="card-body d-flex flex-column">
+                        <!-- Instruction -->
                         <p>Clique sur un sort :</p>
+<!-- Boutons de sorts -->
                         <div class="d-grid gap-2 mb-3">
                             <button data-spell="classic" class="btn btn-warning">🔮 Classique</button>
                             <button data-spell="expression" class="btn btn-info text-white">🌀 Expression</button>
                             <button data-spell="arrow" class="btn btn-success">⚡ Flèche</button>
                         </div>
-                        <div class="alert alert-secondary mb-0" id="outSpells">
+<!-- Zone d’affichage du résultat du sort -->
+<div id="outSpells" class="alert alert-secondary mb-0">
                             Aucun sort lancé.
                         </div>
                     </div>
                 </div>
             </section>
-            </div>
-    </div>
 
-    <!-- Bootstrap JS & Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-…"
+        </div>
+    </main>
+
+    <!-- 4. Scripts externes : Popper et Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
 
-    <!-- Votre script principal -->
+    <!-- 5. Script principal : module ES -->
     <script type="module" src="./scripts/main.js"></script>
 </body>
 
