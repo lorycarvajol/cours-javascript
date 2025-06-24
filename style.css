@@ -2,14 +2,14 @@
   Variables globales
 ────────────────────────────────────────────────────────────────────────────*/
 :root {
-    --purple:       #6f42c1;
-    --purple-dark:  #58229c;
-    --light-bg:     #f0f2f5;
-    --text-color:   #333;
-    --card-bg:      #fff;
-    --card-shadow:  rgba(0, 0, 0, 0.1);
-    --code-bg:      #eef;
-    --alert-bg:     #f8f9fa;
+    --purple:       #b81b1b;
+    --red-dark:  #891d1d;
+    --light-bg:     #1c1a1a;
+    --text-color:   #ffffff;
+    --card-bg:      #000000;
+    --card-shadow:  rgba(255, 2, 2, 0.543);
+    --code-bg:      rgb(15, 15, 15);
+    --alert-bg:     #ffffff;
     --alert-border: var(--purple);
   }
   
@@ -35,7 +35,7 @@
     Typography
   ────────────────────────────────────────────────────────────────────────────*/
   h1, h2 {
-    color: var(--purple-dark);
+    color: var(--red-dark);
     margin-top: 0;
   }
   
@@ -60,7 +60,7 @@
   
   .navbar-brand,
   .nav-link {
-    color: #000000 !important;
+    color: #ffffff !important;
     font-weight: 500;
   }
   
@@ -72,8 +72,8 @@
     Hero / Jumbotron
   ────────────────────────────────────────────────────────────────────────────*/
   .hero {
-    background: var(--purple-dark);
-    color: #ebebeb;
+    background: var(--red-dark);
+    color: #585887;
     text-align: center;
     padding: 3rem 1rem;
     border-radius: .5rem;
@@ -124,7 +124,7 @@
   input {
     cursor: pointer;
     padding: .5rem;
-    border: 1px solid #ccc;
+    border: 1px solid #b81b1b;
     border-radius: 6px;
     font-size: 1rem;
     margin-top: .5rem;
@@ -150,8 +150,8 @@
   
   .btn-purple:hover,
   .btn-purple:focus {
-    background: var(--purple-dark);
-    border-color: var(--purple-dark);
+    background: var(--red-dark);
+    border-color: var(--red-dark);
     color: #fff;
   }
   
@@ -205,7 +205,7 @@
     margin-top: 1.5rem;
     padding: 1rem;
     background: #fafafa;
-    border: 1px solid #ddd;
+    border: 1px solid #b81b1b;
     border-radius: 6px;
   }
   
