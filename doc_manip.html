@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - Exercices Variables</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-purple mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">🧪 Potion Factory</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tutoriels.html">Jeux & Exercices</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="references.html">Références</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="test.html">Manip variable</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="exo_manip.html"> exo Manip variable</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="doc_manip.html">doc Manip variable</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container py-5">
+        <section>
+            <h1 class="mb-4">📘 Documentation – Exercices sur les Variables JavaScript</h1>
+            <p>Ce document sert de référence pour les exercices proposés sur les variables. Il présente les notions clés,
+                les objectifs pédagogiques et les bonnes pratiques associées à chaque exercice.</p>
+    
+            <h2 class="mt-5">✏️ Exercice 1 : Déclaration et affichage</h2>
+            <ul>
+                <li><strong>Objectif :</strong> Apprendre à déclarer une variable et l'afficher à l'aide de
+                    <code>alert()</code>.</li>
+                <li><strong>Notions clés :</strong> Déclaration avec <code>let</code>, affichage d'une valeur dans une
+                    alerte.</li>
+                <li><strong>Conseil :</strong> Respecter la syntaxe <code>alert(nomVariable)</code>.</li>
+            </ul>
+    
+            <h2 class="mt-5">📥 Exercice 2 : Saisie utilisateur</h2>
+            <ul>
+                <li><strong>Objectif :</strong> Utiliser <code>prompt()</code> pour récupérer des informations.</li>
+                <li><strong>Notions clés :</strong> Interaction utilisateur, affichage d’un message personnalisé.</li>
+                <li><strong>Exemple :</strong> <code>let nom = prompt("Quel est ton nom ?"); alert("Bonjour " + nom);</code>
+                </li>
+            </ul>
+    
+            <h2 class="mt-5">🔢 Exercice 3 : Opérations mathématiques simples</h2>
+            <ul>
+                <li><strong>Objectif :</strong> Créer deux variables numériques et afficher leur somme.</li>
+                <li><strong>Notions clés :</strong> Types <code>number</code>, opérateur <code>+</code>.</li>
+                <li><strong>Conseil :</strong> Bien séparer la déclaration et le calcul dans des variables distinctes.</li>
+            </ul>
+    
+            <h2 class="mt-5">📉 Exercice 4 : Calcul d’une année de naissance</h2>
+            <ul>
+                <li><strong>Objectif :</strong> Utiliser l’âge saisi par l’utilisateur pour déduire l’année de naissance.
+                </li>
+                <li><strong>Notions clés :</strong> Entrée avec <code>prompt()</code>, soustraction simple, affichage.</li>
+                <li><strong>Exemple :</strong> <code>let age = prompt("Quel est ton âge ?"); let annee = 2025 - age;</code>
+                </li>
+            </ul>
+    
+            <h2 class="mt-5">🧪 Exercice 5 : Concaténation de chaînes</h2>
+            <ul>
+                <li><strong>Objectif :</strong> Comprendre comment combiner plusieurs chaînes de caractères.</li>
+                <li><strong>Notions clés :</strong> Opérateur <code>+</code> pour concaténer, variables de type
+                    <code>string</code>.</li>
+                <li><strong>Astuce :</strong> Utiliser une variable <code>nomComplet</code> pour stocker le résultat.</li>
+            </ul>
+    
+            <h2 class="mt-5">🔁 Exercice 6 : Réassignation de variable</h2>
+            <ul>
+                <li><strong>Objectif :</strong> Apprendre à modifier une variable après sa déclaration.</li>
+                <li><strong>Notions clés :</strong> Le mot-clé <code>let</code> permet la réassignation, contrairement à
+                    <code>const</code>.</li>
+                <li><strong>Exemple :</strong> <code>let score = 0; score = 10;</code></li>
+            </ul>
+    
+            <h2 class="mt-5">🔄 Exercice 7 : Inversion de valeurs</h2>
+            <ul>
+                <li><strong>Objectif :</strong> Utiliser une variable temporaire pour inverser deux valeurs.</li>
+                <li><strong>Notions clés :</strong> Manipulation des variables, logique d’échange.</li>
+                <li><strong>Schéma :</strong><br><code>temp = a;<br>a = b;<br>b = temp;</code></li>
+            </ul>
+    
+            <h2 class="mt-5">⚖️ Exercice 8 : Affichage conditionnel</h2>
+            <ul>
+                <li><strong>Objectif :</strong> Utiliser une structure <code>if / else</code> pour faire des choix logiques.
+                </li>
+                <li><strong>Notions clés :</strong> Comparaison, opérateurs <code>&gt;=</code>, logique conditionnelle.</li>
+                <li><strong>Conseil :</strong> Toujours afficher un message clair avec
+                    <code>document.getElementById("result").innerText</code>.</li>
+            </ul>
+    
+            <hr class="my-5">
+            <p class="text-muted">Pour approfondir ces notions, consulte aussi la page de cours principale et expérimente en
+                modifiant les exemples proposés dans les champs interactifs.</p>
+        </section>
+        </div>
+</body>
+
+</html>

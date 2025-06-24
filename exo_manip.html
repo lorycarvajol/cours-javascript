@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apprendre les Variables en JavaScript</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        textarea.code-editor {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1rem;
+            background-color: #f8f9fa;
+            border: 1px solid #ced4da;
+            padding: 1rem;
+            border-radius: 0.375rem;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+            spellcheck: false;
+        }
+
+        textarea.code-editor:focus {
+            outline: none;
+            border-color: #86b7fe;
+            box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-purple mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">🧪 Potion Factory</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tutoriels.html">Jeux & Exercices</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="references.html">Références</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="test.html">Manip variable</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="exo_manip.html"> exo Manip variable</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="doc_manip.html">doc Manip variable</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container py-5">
+        <hr class="my-5">
+        <section id="page-5">
+            <h2>Page d'exercices : Variables en JavaScript</h2>
+            <p>Voici une série d'exercices simples pour t'entraîner à utiliser les variables en JavaScript. Tu peux
+                entrer ton code dans les champs et cliquer sur "Exécuter" pour afficher le résultat. En cas d'erreur, un
+                message t'indiquera ce qui ne va pas.</p>
+
+            <div class="mb-5">
+                <h5>Exercice 1 : Déclaration et affichage</h5>
+                <p><strong>Consigne :</strong> Crée une variable appelée <code>prenom</code> contenant ton prénom, puis
+                    affiche-la avec <code>alert()</code>.</p>
+                <textarea id="code1" class="form-control code-editor" rows="4" placeholder="Écris ton code ici..."
+                    spellcheck="false"></textarea>
+                <button class="btn btn-primary mt-2" onclick="executer(1)">Exécuter</button>
+                <p id="feedback1" class="mt-3"></p>
+            </div>
+
+            <div class="mb-5">
+                <h5>Exercice 2 : Calculer un âge</h5>
+                <p><strong>Consigne :</strong> Crée deux variables <code>anneeNaissance</code> et
+                    <code>anneeActuelle</code>, puis calcule l'âge à l'aide d'une variable <code>age</code>. Affiche le
+                    résultat dans un paragraphe avec <code>document.getElementById("result2").innerText</code>.</p>
+                <textarea id="code2" class="form-control code-editor" rows="5" placeholder="Écris ton code ici..."
+                    spellcheck="false"></textarea>
+                <button class="btn btn-primary mt-2" onclick="executer(2)">Exécuter</button>
+                <p id="result2" class="mt-3 alert alert-info"></p>
+                <p id="feedback2" class="text-danger"></p>
+            </div>
+
+            <div class="mb-5">
+                <h5>Exercice 3 : Calculs simples</h5>
+                <p><strong>Consigne :</strong> Déclare deux variables numériques et affiche leur somme, leur différence,
+                    leur produit et leur quotient dans la zone <code>result3</code>.</p>
+                <textarea id="code3" class="form-control code-editor" rows="6" placeholder="Écris ton code ici..."
+                    spellcheck="false"></textarea>
+                <button class="btn btn-primary mt-2" onclick="executer(3)">Exécuter</button>
+                <p id="result3" class="mt-3 alert alert-info"></p>
+                <p id="feedback3" class="text-danger"></p>
+            </div>
+
+            <div class="mb-5">
+                <h5>Exercice 4 : Comparaison de valeurs</h5>
+                <p><strong>Consigne :</strong> Compare deux valeurs et affiche les résultats des comparaisons
+                    <code>==</code> et <code>===</code> dans la zone <code>result4</code>.</p>
+                <textarea id="code4" class="form-control code-editor" rows="5" placeholder="Écris ton code ici..."
+                    spellcheck="false"></textarea>
+                <button class="btn btn-primary mt-2" onclick="executer(4)">Exécuter</button>
+                <p id="result4" class="mt-3 alert alert-info"></p>
+                <p id="feedback4" class="text-danger"></p>
+            </div>
+
+        </section>
+    </div>
+    <div class="container ">
+    
+        <section id="page-5">
+            
+    
+            <!-- Exercices 1 à 4 déjà existants ici -->
+    
+            <!-- Nouveaux exercices -->
+            <div class="mb-5">
+                <h5>Exercice 5 : Concaténation de chaînes</h5>
+                <p><strong>Consigne :</strong> Crée deux variables contenant un prénom et un nom, puis affiche le nom
+                    complet dans la zone <code>result5</code>.</p>
+                <textarea id="code5" class="form-control code-editor" rows="4" placeholder="Écris ton code ici..."
+                    spellcheck="false"></textarea>
+                <button class="btn btn-primary mt-2" onclick="executer(5)">Exécuter</button>
+                <p id="result5" class="mt-3 alert alert-info"></p>
+                <p id="feedback5" class="text-danger"></p>
+            </div>
+    
+            <div class="mb-5">
+                <h5>Exercice 6 : Réassignation de variable</h5>
+                <p><strong>Consigne :</strong> Déclare une variable avec une valeur initiale, puis change sa valeur. Affiche
+                    la nouvelle valeur dans la zone <code>result6</code>.</p>
+                <textarea id="code6" class="form-control code-editor" rows="4" placeholder="Écris ton code ici..."
+                    spellcheck="false"></textarea>
+                <button class="btn btn-primary mt-2" onclick="executer(6)">Exécuter</button>
+                <p id="result6" class="mt-3 alert alert-info"></p>
+                <p id="feedback6" class="text-danger"></p>
+            </div>
+    
+            <div class="mb-5">
+                <h5>Exercice 7 : Inversion de valeurs</h5>
+                <p><strong>Consigne :</strong> Crée deux variables <code>a</code> et <code>b</code>, échange leurs valeurs
+                    puis affiche-les dans <code>result7</code>.</p>
+                <textarea id="code7" class="form-control code-editor" rows="6" placeholder="Écris ton code ici..."
+                    spellcheck="false"></textarea>
+                <button class="btn btn-primary mt-2" onclick="executer(7)">Exécuter</button>
+                <p id="result7" class="mt-3 alert alert-info"></p>
+                <p id="feedback7" class="text-danger"></p>
+            </div>
+    
+            <div class="mb-5">
+                <h5>Exercice 8 : Affichage conditionnel</h5>
+                <p><strong>Consigne :</strong> Crée une variable représentant un âge. Si l'âge est supérieur ou égal à 18,
+                    affiche "Majeur", sinon "Mineur" dans <code>result8</code>.</p>
+                <textarea id="code8" class="form-control code-editor" rows="6" placeholder="Écris ton code ici..."
+                    spellcheck="false"></textarea>
+                <button class="btn btn-primary mt-2" onclick="executer(8)">Exécuter</button>
+                <p id="result8" class="mt-3 alert alert-info"></p>
+                <p id="feedback8" class="text-danger"></p>
+            </div>
+    
+        </section>
+    </div>
+    
+    <script>
+        function executer(numero) {
+            const textarea = document.getElementById("code" + numero);
+            const feedback = document.getElementById("feedback" + numero);
+            const result = document.getElementById("result" + numero);
+            feedback.textContent = "";
+            if (result) result.textContent = "";
+            try {
+                new Function(textarea.value)();
+                feedback.innerHTML = '<span class="text-success">Code exécuté avec succès ✅</span>';
+            } catch (e) {
+                feedback.innerHTML = '<span class="text-danger">Erreur : ' + e.message + '</span>';
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

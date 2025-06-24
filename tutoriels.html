@@ -9,9 +9,9 @@
     <!-- 1. Bootstrap CSS (CDN) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-<!-- 2. Google Font : Roboto -->
+    <!-- 2. Google Font : Roboto -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<!-- 3. Feuille de styles globale -->
+    <!-- 3. Feuille de styles globale -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -20,32 +20,29 @@
     <!-- NAVBAR : en-tête de navigation responsive -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-purple mb-4">
         <div class="container">
-            <!-- Logo / Brand -->
             <a class="navbar-brand" href="index.html">🧪 Potion Factory</a>
-            <!-- Bouton burger pour écrans réduits -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-                </button>
-            <!-- Liens de navigation -->
+            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <!-- Lien Accueil -->
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tutoriels.html">Jeux & Exercices</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="references.html">Références</a></li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Accueil</a>
+                        <a class="nav-link" href="test.html">Manip variable</a>
                     </li>
-                    <!-- Lien Jeux & Exercices (actif) -->
                     <li class="nav-item">
-                        <a class="nav-link active" href="tutoriels.html">Jeux & Exercices</a>
+                        <a class="nav-link" href="exo_manip.html"> exo Manip variable</a>
                     </li>
-                    <!-- Lien Références -->
                     <li class="nav-item">
-                        <a class="nav-link" href="references.html">Références</a>
+                        <a class="nav-link" href="doc_manip.html">doc Manip variable</a>
                     </li>
-                    </ul>
-                    </div>
-                    </div>
-                    </nav>
+                </ul>
+                </div>
+                </div>
+                </nav>
 
     <!-- HERO : bannière d’introduction -->
     <header class="container-fluid px-4 mb-5">
@@ -77,9 +74,9 @@
                             Dans la fonction <code>test()</code>, on déclare <code>x</code> avec <code>var</code> et
                             <code>y</code> avec <code>let</code> dans un bloc. Que va afficher la console à chaque
                             <code>console.log</code> ? Indique les deux résultats, séparés par une virgule.
-                            </p>
-                            <!-- Code à lire -->
-                            <pre class="code-snippet"><code>
+                        </p>
+                        <!-- Code à lire -->
+                        <pre class="code-snippet"><code>
                             // Code :
                             function test() {
                               if (true) {
@@ -90,11 +87,11 @@
                               console.log(y);
                             }
 test();</code></pre>
-<!-- Zone de saisie de la réponse -->
-<div class="mb-3">
-    <label for="answer1" class="form-label">Votre réponse :</label>
-    <input type="text" id="answer1" class="form-control" placeholder="ex : 1,ReferenceError">
-</div>
+                        <!-- Zone de saisie de la réponse -->
+                        <div class="mb-3">
+                            <label for="answer1" class="form-label">Votre réponse :</label>
+                            <input type="text" id="answer1" class="form-control" placeholder="ex : 1,ReferenceError">
+                        </div>
                         <!-- Boutons d’action -->
                         <div class="d-flex gap-2">
                             <button id="check1" class="btn btn-purple">Vérifier</button>
@@ -107,9 +104,9 @@ test();</code></pre>
                             1 → <code>1</code> (x visible hors du bloc)<br>
                             2 → <strong>ReferenceError</strong> (y non défini hors du bloc)
                         </div>
-                        </div>
-                        </div>
-                        </section>
+                    </div>
+                    </div>
+                    </section>
 
             <!-- Exercice 2 : réaffectation const -->
             <section class="col-12 col-lg-6">
@@ -120,27 +117,27 @@ test();</code></pre>
                         <p><strong>Énoncé détaillé :</strong><br>
                             On définit <code>const MY_POTION = 'vie'</code>. Complète la ligne suivante pour qu’elle
                             lance une <code>TypeError</code> lors de l’exécution.
-                            </p>
-                            <pre class="code-snippet"><code>
+                        </p>
+                        <pre class="code-snippet"><code>
                             //…
 // À compléter ici :</code></pre>
-<div class="mb-3">
-    <label for="answer2" class="form-label">Votre ligne de réaffectation :</label>
-    <input type="text" id="answer2" class="form-control" placeholder="ex : MY_POTION = 'mana';">
-</div>
-<div class="d-flex gap-2">
-    <button id="check2" class="btn btn-purple">Vérifier</button>
-    <button id="show2" class="btn btn-outline-secondary">Solution</button>
-    <button id="reset2" class="btn btn-outline-danger">Relancer</button>
-</div>
-<div id="feedback2" class="mt-3"></div>
-<div id="solution2" class="solution">
-    <code>MY_POTION = 'mana';</code><br>
-    → TypeError : assignment to constant variable.
-</div>
-</div>
-</div>
-</section>
+                        <div class="mb-3">
+                            <label for="answer2" class="form-label">Votre ligne de réaffectation :</label>
+                            <input type="text" id="answer2" class="form-control" placeholder="ex : MY_POTION = 'mana';">
+                        </div>
+                        <div class="d-flex gap-2">
+                            <button id="check2" class="btn btn-purple">Vérifier</button>
+                            <button id="show2" class="btn btn-outline-secondary">Solution</button>
+                            <button id="reset2" class="btn btn-outline-danger">Relancer</button>
+                        </div>
+                        <div id="feedback2" class="mt-3"></div>
+                        <div id="solution2" class="solution">
+                            <code>MY_POTION = 'mana';</code><br>
+                            → TypeError : assignment to constant variable.
+                        </div>
+                        </div>
+                        </div>
+                        </section>
 
             <!-- Exercice 3 : styles de fonctions -->
             <section class="col-12">
@@ -154,49 +151,49 @@ test();</code></pre>
                             – <code>const foo = function(){…}</code> (expression)<br>
                             – <code>const foo = ()=>{…}</code> (arrow)<br>
                             Choisis le bon type pour chaque description.
-                            </p>
-                            <!-- Sélecteurs QCM -->
-                            <div class="mb-3">
-                                <label class="form-label">Classic (hoisted)</label>
-                                <select id="q3a" class="form-select" data-correct="classic">
-                                    <option value="">-- Choisir --</option>
-                                    <option value="classic">function foo()…</option>
-                                    <option value="expression">const foo = function()…</option>
-                                    <option value="arrow">const foo = () => …</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Expression</label>
-                                <select id="q3b" class="form-select" data-correct="expression">
-                                    <option value="">-- Choisir --</option>
-                                    <option value="classic">function foo()…</option>
-                                    <option value="expression">const foo = function()…</option>
-                                    <option value="arrow">const foo = () => …</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Arrow</label>
-                                <select id="q3c" class="form-select" data-correct="arrow">
-                                    <option value="">-- Choisir --</option>
-                                    <option value="classic">function foo()…</option>
-                                    <option value="expression">const foo = function()…</option>
-                                    <option value="arrow">const foo = () => …</option>
-                                </select>
-                            </div>
-                            <div class="d-flex gap-2">
-                                <button id="check3" class="btn btn-purple">Vérifier</button>
-                                <button id="show3" class="btn btn-outline-secondary">Solution</button>
-                                <button id="reset3" class="btn btn-outline-danger">Relancer</button>
-                            </div>
-                            <div id="feedback3" class="mt-3"></div>
-                            <div id="solution3" class="solution">
-                                - Classic → <code>classic</code><br>
-                                - Expression → <code>expression</code><br>
-                                - Arrow → <code>arrow</code>
-                            </div>
-                            </div>
-                            </div>
-                            </section>
+                        </p>
+                        <!-- Sélecteurs QCM -->
+                        <div class="mb-3">
+                            <label class="form-label">Classic (hoisted)</label>
+                            <select id="q3a" class="form-select" data-correct="classic">
+                                <option value="">-- Choisir --</option>
+                                <option value="classic">function foo()…</option>
+                                <option value="expression">const foo = function()…</option>
+                                <option value="arrow">const foo = () => …</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Expression</label>
+                            <select id="q3b" class="form-select" data-correct="expression">
+                                <option value="">-- Choisir --</option>
+                                <option value="classic">function foo()…</option>
+                                <option value="expression">const foo = function()…</option>
+                                <option value="arrow">const foo = () => …</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Arrow</label>
+                            <select id="q3c" class="form-select" data-correct="arrow">
+                                <option value="">-- Choisir --</option>
+                                <option value="classic">function foo()…</option>
+                                <option value="expression">const foo = function()…</option>
+                                <option value="arrow">const foo = () => …</option>
+                            </select>
+                        </div>
+                        <div class="d-flex gap-2">
+                            <button id="check3" class="btn btn-purple">Vérifier</button>
+                            <button id="show3" class="btn btn-outline-secondary">Solution</button>
+                            <button id="reset3" class="btn btn-outline-danger">Relancer</button>
+                        </div>
+                        <div id="feedback3" class="mt-3"></div>
+                        <div id="solution3" class="solution">
+                            - Classic → <code>classic</code><br>
+                            - Expression → <code>expression</code><br>
+                            - Arrow → <code>arrow</code>
+                        </div>
+                        </div>
+                        </div>
+                        </section>
 
             <!-- Exercice 4 et 5 : rallonge des exercices -->
             <div class="row gy-4 mt-4">
@@ -210,8 +207,8 @@ test();</code></pre>
                                 Prédisez les deux logs : que renvoie <code>console.log</code> pour <code>a</code> et
                                 <code>b</code> ?
                                 Indiquez les deux résultats par une virgule.
-                                </p>
-                                <pre class="code-snippet"><code>
+                            </p>
+                            <pre class="code-snippet"><code>
                                 // Code :
                                 var a = 1;
                                 var a = 2;
@@ -220,23 +217,23 @@ test();</code></pre>
                                 let b = 1;
                                 let b = 2;
 console.log(b);</code></pre>
-<div class="mb-3">
-    <label for="answer4" class="form-label">Votre réponse :</label>
-    <input type="text" id="answer4" class="form-control" placeholder="ex : 2,SyntaxError">
-</div>
-<div class="d-flex gap-2">
-    <button id="check4" class="btn btn-purple">Vérifier</button>
-    <button id="show4" class="btn btn-outline-secondary">Solution</button>
-    <button id="reset4" class="btn btn-outline-danger">Relancer</button>
-</div>
-<div id="feedback4" class="mt-3"></div>
-<div id="solution4" class="solution">
-    1 → <code>2</code> (var redéclaré OK)<br>
+                            <div class="mb-3">
+                                <label for="answer4" class="form-label">Votre réponse :</label>
+                                <input type="text" id="answer4" class="form-control" placeholder="ex : 2,SyntaxError">
+                            </div>
+                            <div class="d-flex gap-2">
+                                <button id="check4" class="btn btn-purple">Vérifier</button>
+                                <button id="show4" class="btn btn-outline-secondary">Solution</button>
+                                <button id="reset4" class="btn btn-outline-danger">Relancer</button>
+                            </div>
+                            <div id="feedback4" class="mt-3"></div>
+                            <div id="solution4" class="solution">
+                                1 → <code>2</code> (var redéclaré OK)<br>
                                 2 → <strong>SyntaxError</strong> (let interdite)
-                                </div>
-                                </div>
-                                </div>
-                                </section>
+                            </div>
+                            </div>
+                            </div>
+                            </section>
                 <!-- Exercice 5 -->
                 <section class="col-12 col-lg-6">
                     <div class="card h-100 shadow-sm">
@@ -245,33 +242,33 @@ console.log(b);</code></pre>
                             <p><strong>Objectif :</strong> Différence réassignation vs mutation.</p>
                             <p><strong>Énoncé détaillé :</strong><br>
                                 Que renvoient ces deux logs ? Indiquez les résultats par une virgule.
-                                </p>
-                                <pre class="code-snippet"><code>
+                            </p>
+                            <pre class="code-snippet"><code>
                                 // Code :
 const potion = { level: 1 };
 potion.level = 5;
 console.log(potion.level);
 potion = { level: 10 };
 console.log(potion.level);</code></pre>
-<div class="mb-3">
-    <label for="answer5" class="form-label">Votre réponse :</label>
-    <input type="text" id="answer5" class="form-control" placeholder="ex : 5,TypeError">
-</div>
-<div class="d-flex gap-2">
-    <button id="check5" class="btn btn-purple">Vérifier</button>
-    <button id="show5" class="btn btn-outline-secondary">Solution</button>
-    <button id="reset5" class="btn btn-outline-danger">Relancer</button>
-</div>
-<div id="feedback5" class="mt-3"></div>
-<div id="solution5" class="solution">
-    1 → <code>5</code> (mutation OK)<br>
-    2 → <strong>TypeError</strong> (réassignation interdite)
-</div>
-</div>
-</div>
-</section>
+                            <div class="mb-3">
+                                <label for="answer5" class="form-label">Votre réponse :</label>
+                                <input type="text" id="answer5" class="form-control" placeholder="ex : 5,TypeError">
+                            </div>
+                            <div class="d-flex gap-2">
+                                <button id="check5" class="btn btn-purple">Vérifier</button>
+                                <button id="show5" class="btn btn-outline-secondary">Solution</button>
+                                <button id="reset5" class="btn btn-outline-danger">Relancer</button>
+                            </div>
+                            <div id="feedback5" class="mt-3"></div>
+                            <div id="solution5" class="solution">
+                                1 → <code>5</code> (mutation OK)<br>
+                                2 → <strong>TypeError</strong> (réassignation interdite)
+                            </div>
+                            </div>
+                            </div>
+                            </section>
             </div>
-            </div>
+        </div>
     </main>
 
     <!-- Chargement Popper & Bootstrap JS -->
@@ -316,30 +313,30 @@ console.log(potion.level);</code></pre>
             };
         });
 
-    // Exercice 2 : const réaffectation
-    makeExercise(2, v => ({
-        ok: v.trim() === "MY_POTION = 'mana';",
+                // Exercice 2 : const réaffectation
+                makeExercise(2, v => ({
+                    ok: v.trim() === "MY_POTION = 'mana';",
             msg: v.trim() === "MY_POTION = 'mana';" ? 'Exact !' : 'Syntaxe incorrecte'
         }));
 
-    // Exercice 3 : fonctions (spécial)
-    document.getElementById('check3').onclick = () => {
-        const sels = ['q3a', 'q3b', 'q3c'].map(id => document.getElementById(id));
-        const ok = sels.every(s => s.value === s.dataset.correct);
-        document.getElementById('feedback3').innerHTML =
-            ok
-                                    ? '<div class="alert alert-success">✅ Correct !</div>'
-                                    : '<div class="alert alert-danger">❌ 1 ou plusieurs erreurs</div>';
-                        };
-                        document.getElementById('show3').onclick = () => document.getElementById('solution3').style.display = 'block';
-                        document.getElementById('reset3').onclick = () => {
-                            ['q3a', 'q3b', 'q3c'].forEach(id => document.getElementById(id).value = '');
-                            document.getElementById('feedback3').innerHTML = '';
-                            document.getElementById('solution3').style.display = 'none';
-                        };
+                // Exercice 3 : fonctions (spécial)
+                document.getElementById('check3').onclick = () => {
+                    const sels = ['q3a', 'q3b', 'q3c'].map(id => document.getElementById(id));
+                    const ok = sels.every(s => s.value === s.dataset.correct);
+                    document.getElementById('feedback3').innerHTML =
+                        ok
+                            ? '<div class="alert alert-success">✅ Correct !</div>'
+                            : '<div class="alert alert-danger">❌ 1 ou plusieurs erreurs</div>';
+                };
+                document.getElementById('show3').onclick = () => document.getElementById('solution3').style.display = 'block';
+                document.getElementById('reset3').onclick = () => {
+                    ['q3a', 'q3b', 'q3c'].forEach(id => document.getElementById(id).value = '');
+                    document.getElementById('feedback3').innerHTML = '';
+                    document.getElementById('solution3').style.display = 'none';
+                };
 
-    // Exercice 4 : redeclaration
-    makeExercise(4, v => {
+                // Exercice 4 : redeclaration
+                makeExercise(4, v => {
             const [x, y] = v.split(',').map(s => s.trim().toLowerCase());
             return {
                 ok: x === '2' && y.startsWith('syntaxerror'),
@@ -347,15 +344,15 @@ console.log(potion.level);</code></pre>
             };
         });
 
-    // Exercice 5 : mutation const
-    makeExercise(5, v => {
+                // Exercice 5 : mutation const
+                makeExercise(5, v => {
             const [x, y] = v.split(',').map(s => s.trim().toLowerCase());
             return {
                 ok: x === '5' && y.startsWith('typeerror'),
                 msg: 'Vérifié'
             };
         });
-                </script>
+</script>
     
     </body>
 
