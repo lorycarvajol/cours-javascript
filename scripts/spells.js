@@ -18,3 +18,7 @@ export function castClassic() {
     return '⚡ Sort Flèche lancé : “Zap-Zoom!”';
   };
   
+  // 4. Sort ghost (bouh function – syntaxe courte, pas de this)
+  export const castFantome = () => {
+    return '👻 Sort Ghost lancé : “Bouh!”';
+  };

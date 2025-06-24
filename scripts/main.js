@@ -3,7 +3,8 @@ import { lockBase }       from './base.js';
 import { demoMixer }      from './mixer.js';
 import { castClassic,
          castExpression,
-         castArrow }      from './spells.js';
+         castArrow,
+         castFantome }      from './spells.js';
 
 // Section Base (const)
 const selBase       = document.getElementById('selBase');
@@ -50,6 +51,8 @@ document.querySelectorAll('#spellBook button').forEach(btn => {
     if (spell === 'classic')       result = castClassic();
     else if (spell === 'expression') result = castExpression();
     else if (spell === 'arrow')     result = castArrow();
+    else if (spell === 'fantome')   result = castFantome();
+    else                            result = 'Bouh !';
     outSpells.textContent = result;
   });
 });
