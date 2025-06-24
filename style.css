@@ -2,7 +2,7 @@
   Variables globales
 ────────────────────────────────────────────────────────────────────────────*/
 :root {
-    --purple:       #6f42c1;
+    --purple:       #c14279;
     --purple-dark:  #58229c;
     --light-bg:     #f0f2f5;
     --text-color:   #333;
@@ -124,7 +124,7 @@
   input {
     cursor: pointer;
     padding: .5rem;
-    border: 1px solid #ccc;
+    border: 1px solid #bdbbbb;
     border-radius: 6px;
     font-size: 1rem;
     margin-top: .5rem;
