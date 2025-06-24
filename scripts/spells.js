@@ -15,7 +15,7 @@ export function castClassic() {
   
   // 3. Sort flèche (arrow function – syntaxe courte, pas de this)
   export const castArrow = () => {
-    return '⚡ Sort Flèche lancé : “Zap-Zoom!”';
+    return '⚡ Sort Flèche lancé : “Fizz!”';
   };
   
   // 4. Sort ghost (bouh function – syntaxe courte, pas de this)

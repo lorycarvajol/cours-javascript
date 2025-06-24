@@ -2,11 +2,11 @@
   Variables globales
 ────────────────────────────────────────────────────────────────────────────*/
 :root {
-    --purple:       #f10a0a;
+    --purple:       #000000;
     --purple-dark:  #58229c;
-    --light-bg:     #f0f2f5;
+    --light-bg:     #18202c;
     --text-color:   #333;
-    --card-bg:      #fff;
+    --card-bg:      #5555e8;
     --card-shadow:  rgba(0, 0, 0, 0.1);
     --code-bg:      #eef;
     --alert-bg:     #f8f9fa;
@@ -49,6 +49,7 @@
     padding: 2px 6px;
     border-radius: 4px;
     font-family: monospace;
+    color: rgb(2, 2, 2);
   }
   
   /*────────────────────────────────────────────────────────────────────────────
@@ -73,7 +74,7 @@
   ────────────────────────────────────────────────────────────────────────────*/
   .hero {
     background: var(--purple-dark);
-    color: #ebebeb;
+    color: #fcf8f8;
     text-align: center;
     padding: 3rem 1rem;
     border-radius: .5rem;
@@ -124,7 +125,7 @@
   input {
     cursor: pointer;
     padding: .5rem;
-    border: 1px solid #ccc;
+    border: 1px solid #fcfbfb;
     border-radius: 6px;
     font-size: 1rem;
     margin-top: .5rem;
@@ -199,6 +200,7 @@
     padding: 2rem;
     border-radius: .5rem;
     box-shadow: 0 2px 8px var(--card-shadow);
+    color: white;
   }
   
   .exercice {
