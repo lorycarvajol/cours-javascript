@@ -22,3 +22,5 @@ export function castClassic() {
   export const castFantome = () => {
     return '👻 Sort Ghost lancé : “Bouh!”';
   };
+  
+

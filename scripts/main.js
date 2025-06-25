@@ -55,3 +55,8 @@ document.querySelectorAll('#spellBook button').forEach(btn => {
        outSpells.textContent = result;
   });
 });
+
+ // test animation 
+  import { draw, } from './testAnim.js';
+  const canvas = document.getElementById('canvas');
+  draw();
