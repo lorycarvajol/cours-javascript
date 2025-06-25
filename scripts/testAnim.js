@@ -3,6 +3,7 @@ var ctx = canvas.getContext('2d');
 
 let x= 0;// position du cercle
 let speed= 2; // vitesse de déplacement du cercle
+draw();//demarre l'animation
 
 export function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height); // Efface le canvas a chaque frame
@@ -17,8 +18,8 @@ requestAnimationFrame(draw);   // Appelle la fonction draw à chaque frame
 }
 
   //1. Animation cercle
-  
-     draw();//demarre l'animation
-     setInterval(draw, 1000 );
+    //  setInterval(draw, 1800 );
+    
+     
 
      
